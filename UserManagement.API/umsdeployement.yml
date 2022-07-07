@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: usermanagementdeployement
+  name: umsdeployement
   labels:
-    app: UserManagement
+    app: usermanagement
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: UserManagement
+      app: usermanagement
   template:
     metadata:
       labels:
-        app: UserManagement
+        app: usermanagement
     spec:
       containers:
-      - name: UserManagement
+      - name: usermanagement
         image: ums33pod1.azurecr.io/umsrepo:latest
         ports:
         - containerPort: 8080
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: UserManagementsvc
+  name: usermanagementsvc
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: UserManagement
+    app: usermanagement

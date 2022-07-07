@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Update="usermanagementdeployement.yml">
+	  <None Update="umsdeployement.yml">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </None>
 	</ItemGroup>
